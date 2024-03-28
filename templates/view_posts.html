@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            color: blueviolet;
+            font-size: xx-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+        }
+        .post{
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    
+        <center><mark><h2>FOOD BLOG POSTS</h2></mark></center>
+        {%for i in posts %}
+    
+            <h1 class="container">{{i[1]}}</h1>
+            <p class="post">{{i[2]}}</p>
+            <small class="post">posted at:{{i[3]}}</small>
+            <form method="POST" action="{{url_for('delete_post',id=i[0])}}" onsubmit="return confirm('Are you sure you want to delete this posts?');">
+                <button>Delete</button>
+            </form>
+            <form method="GET" action="{{url_for('update_post',id=i[0])}}">
+                <button>Edit</button>
+            </form>
+    
+        {% endfor %}
+
+    
+    
+    
+</body>
+</html>

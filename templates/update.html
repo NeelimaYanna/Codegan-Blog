@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <center><h2>Update your post</h2></center>
+        <center><table border="1">
+            
+        <tr>
+        <th><label for="">title</label></th>
+        <td><input type="text" name="title" value="{{post[1]}}"></td>
+        <br>
+        </tr>
+        <tr>
+            <th><label for="">content</label></th>
+            <td><textarea id="content" name="content" rows="4" cols="50">{{post[2]}}</textarea></td>
+            </tr>
+        <tr>
+        <th><label for="">slug</label></th>
+        <td><input type="text" name="slug" value="{{post[4]}}"><br></td>
+        </tr>
+        
+        </table></center>
+        <br>
+        <center><button>Update Post</button></center>
+        
+
+    </form>
+</body>
+</html>
