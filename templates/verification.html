@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .im{
+            background-image: url("https://thumbs.dreamstime.com/b/different-spices-herbs-stone-table-top-view-ingredients-cooking-food-background-different-spices-herbs-black-120232209.jpg");
+            height: 100vh;
+            width: 100vw;
+            background-size: cover;
+            text-align: center;
+            font-weight: bold;
+            color:white;
+            font-size: 20px;
+    
+        }
+        .size{
+            font-size:50px;
+            color: white;
+        
+        }
+        .btn{
+            border-width: 0px;
+            padding: 6px;
+            margin: 3px;
+            width: 90px;
+            border-radius: 5px;
+        }
+        </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>verification</title>
 </head>
 <body>
+    <div class="im">
+    <center>
     <form action="{{url_for('otp',username=username,password=password,mobile=mobile,address=address,otp=otp,email=email)}}" method="post">
-        <h1>verification</h1>
-    <table border="1">
-    <tr><th><label for="">otp</label></th>
-    <td>X<input type="text" name="uotp"></td>
+        <br>
+        <br>
+        <br>
+        <h1 class="size">verification</h1>
+    <table>
+    <tr><th><label for="">otp:</label></th>
+    <td><input type="text" name="uotp"></td>
     </tr>
     </table>
-    <button>verify</button>
+    <br>
+    <br>
+    <button class="btn">verify</button>
     </form>
+    </center>
+</div>
 
     
 </body>
